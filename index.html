@@ -33,10 +33,11 @@
 
 </section>
 
-<nav class="navbar navbar-expand-sm bg-transparent">
+<nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
   <div class="container">
     <a class="navbar-brand" href="#">Sans Weddings</a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" 
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -60,7 +61,7 @@
 <section id="home" class="home">
   <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-5 text-center">
+    <div class="col-md-8 text-center">
       <h2>Acara Pernikahan</h2>
       <h3>Diselenggarakan pada 04 April 2026 di Mekar Indah Jaya, Kec. Banjar Baru Kab. Tulang Bawang, Lampung</h3>
       <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan kami. </p>
@@ -107,7 +108,7 @@
         
         <p class="alamat">Alamat: Kediaman Bpk. Yudiman<br>Jl. Lintas Rawa Pitu RT 002 RW 002, Kamp.Mekar Indah Jaya, Kec.Banjar Baru, Kab.Tulang Bawang, Prov.Lampung</p>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d2980.4016008020712!2d105.30215878380903!3d-4.343598219543639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m4!2s-4.342343%2C%20105.302710!3m2!1d-4.342343!2d105.30270999999999!4m4!2s-4.342343%2C%20105.302710!3m2!1d-4.342343!2d105.30270999999999!5e0!3m2!1sid!2sid!4v1762865231256!5m2!1sid!2sid" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d2980.4016008020712!2d105.30215878380903!3d-4.343598219543639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m4!2s-4.342343%2C%20105.302710!3m2!1d-4.342343!2d105.30270999999999!4m4!2s-4.342343%2C%20105.302710!3m2!1d-4.342343!2d105.30270999999999!5e0!3m2!1sid!2sid!4v1762865231256!5m2!1sid!2sid" width="700" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a href="https://maps.app.goo.gl/a2z16GtHfEWe4QbaA" target="_blank" class="btn btn-light btn-sm my-3" >Klik Untuk Membuka Gmaps</a>
         <p class="description">"Diharapkan untuk tidak salah alamat dan tanggal"</p>
       </div>
@@ -129,6 +130,7 @@
       </div>
     </div>
   </div>
+  
 </div>
         </div>
         <div class="col-md-5 col-10">
@@ -262,25 +264,25 @@
         </div>
       </div>  
       
-      <form class="row row-cols-md-center g-8 align-items-center justify-content-center"
+      <form class="row row-cols-md-auto g-3 align-items-center justify-content-center"
         method="POST"
         action="https://script.google.com/macros/s/AKfycbx8uxNytwxQJd7EqRXwmqjiHsyfposgTEp2m70SXWItyd2-QQWTIDzkyC1gM9T8ileMug/exec" id="FORM_ID">
         <div class="col-12">
-         <div class="mb-8">
+         <div class="mb-3">
           <label for="Nama" class="form-label">Nama</label>
           <input type="text" class="form-control" id="Nama" name="Nama">
           </div>
         </div>
 
       <div class="col-12">
-        <div class="mb-8">
+        <div class="mb-3">
           <label for="Jumlah" class="form-label">Jumlah</label>
           <input type="number" class="form-control" id="Jumlah" name="Jumlah" min="1" max="10" length="1" value="1">
           </div>
         </div>
 
       <div class="col-12">
-        <div class="mb-8">
+        <div class="mb-3">
           <label for="Status" class="form-label">Konfirmasi</label>
           <select name="Status" id="Status" class="form-select">
             <option selected>Pilih salah satu</option>
@@ -376,7 +378,7 @@
 
   <div id="audio-container">
     <audio id="song" autoplay loop>
-      <source src="audio/Nothings Gonna Change My Love for You _ George Benson - saxophone cover.mp3" type="audio/mp3">
+      <source src="Nothings Gonna Change My Love for You _ George Benson - saxophone cover.mp3" type="audio/mp3">
     </audio>
     <div class="audio-icon-wrapper" style="display: none;">
       <i class="bi bi-disc"></i>
@@ -478,28 +480,23 @@
       day: 4
       
   });
-    </script>
-  <script>
-    const stickytop = document.querySelector('.sticky-top');
+
+  /*sticky menu */
+
+  </script>
+    <script>
+    const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
     offcanvas.addEventListener('show.bs.offcanvas', function() {
-      stickytop.style.overflow = 'visible';
+      stickyTop.style.overflow = 'visible';
     });
 
     offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      stickytop.style.overflow = 'hidden';
+      stickyTop.style.overflow = 'hidden';
     });
-  </script>
-      </div>
-    </div>
-  </div>  
+    </script>
+
+      
+  </body> 
 </html>
-
-
-
-
-
-
-
-
