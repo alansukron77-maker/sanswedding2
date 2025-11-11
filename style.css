@@ -508,7 +508,7 @@ html {
 }
 
 /* handphone */
-@media (max-width: 400px) {
+@media (max-width: 765px) {
 html {
     font-size: 45%;
     }  
@@ -549,6 +549,7 @@ html {
         
     }
 }
+
 
 
 
