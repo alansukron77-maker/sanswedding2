@@ -525,20 +525,21 @@ html {
     }
 
     .timeline li .timeline-panel {
-        width: 50%;
+        width: 100%;
         transform: translateX(1rem);
     }
 
     .timeline li.timeline-panel::before {
-        top: 50px;
+        top: 100px;
 
     }
 
      .timeline li.timeline-panel::after {
-        top: 51px;
+        top: 101px;
         
     }
 }
+
 
 
 
