@@ -518,8 +518,13 @@ html {
         margin: 4px;
     }
 
+    .sticky-top {
+        overflow: hidden;
+
+    }
+
     .mynavbar .nav-link {
-    font-size: 2rem;
+    font-size: 0.5rem;
     text-align: center;
     }
 
@@ -544,6 +549,7 @@ html {
         
     }
 }
+
 
 
 
