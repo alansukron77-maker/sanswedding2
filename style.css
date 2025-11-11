@@ -497,18 +497,18 @@ html {
     }
 
     .timeline li .timeline-image {
-    width: 140;
-    height: 140px;
+    width: 120;
+    height: 120px;
     }
 
      .timeline li .timeline-image {
-    width: 120;
-    height: 120px;
+    width: 100;
+    height: 100px;
     }
 }
 
 /* handphone */
-@media (max-width: 576px) {
+@media (max-width: 500px) {
 html {
     font-size: 50%;
     }  
@@ -530,14 +530,15 @@ html {
     }
 
     .timeline li.timeline-panel::before {
-        top: 100px;
+        top: 90px;
 
     }
 
      .timeline li.timeline-panel::after {
-        top: 101px;
+        top: 91px;
         
     }
 }
+
 
 
