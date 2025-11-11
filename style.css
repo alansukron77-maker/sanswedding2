@@ -518,6 +518,11 @@ html {
         margin: 3px;
     }
 
+     .mynavbar .nav-link {
+    font-size: 1rem;
+    text-align: center;
+    }
+
     .timeline li .timeline-image {
     width: 120;
     height: 120px;
@@ -539,5 +544,6 @@ html {
         
     }
 }
+
 
 
