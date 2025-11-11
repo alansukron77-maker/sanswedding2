@@ -519,8 +519,8 @@ html {
     }
 
     .timeline li .timeline-image {
-    width: 120;
-    height: 120px;
+    width: 100;
+    height: 100px;
     top: 10px;
     }
 
@@ -539,6 +539,7 @@ html {
         
     }
 }
+
 
 
 
