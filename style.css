@@ -510,7 +510,7 @@ html {
 /* handphone */
 @media (max-width: 500px) {
 html {
-    font-size: 50%;
+    font-size: 30%;
     }  
 
     .simply-countdown-circle > .simply-section {
@@ -539,6 +539,7 @@ html {
         
     }
 }
+
 
 
 
