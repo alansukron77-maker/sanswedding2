@@ -79,7 +79,7 @@ text-shadow: var(--shadow);
 }
 
 .mynavbar .offcanvas {
-    height: 70vh;
+    height: 50vh;
 }
 
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title {
@@ -90,7 +90,6 @@ text-shadow: var(--shadow);
 
 .mynavbar .nav-link {
     text-transform: uppercase;
-    
 }
 
 .home {
@@ -549,6 +548,7 @@ html {
         
     }
 }
+
 
 
 
