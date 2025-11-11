@@ -530,15 +530,16 @@ html {
     }
 
     .timeline li.timeline-panel::before {
-        top: 90px;
+        top: 50px;
 
     }
 
      .timeline li.timeline-panel::after {
-        top: 91px;
+        top: 51px;
         
     }
 }
+
 
 
 
