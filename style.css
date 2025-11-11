@@ -510,11 +510,11 @@ html {
 /* handphone */
 @media (max-width: 576px) {
 html {
-    font-size: 60%;
+    font-size: 50%;
     }  
 
     .simply-countdown-circle > .simply-section {
-        padding: 45px;
+        padding: 35px;
         margin: 3px;
     }
 
@@ -525,7 +525,7 @@ html {
     }
 
     .timeline li .timeline-panel {
-        width: 70%;
+        width: 65%;
         transform: translateX(1rem);
     }
 
@@ -535,7 +535,7 @@ html {
     }
 
      .timeline li.timeline-panel::after {
-        top: 101px;   
+        top: 101px;
+        
     }
 }
-
