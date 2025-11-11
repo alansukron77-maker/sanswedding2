@@ -79,12 +79,12 @@ text-shadow: var(--shadow);
 }
 
 .mynavbar .offcanvas {
-    height: 100vh;
+    height: 70vh;
 }
 
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title {
   font-family: 'sacramento', cursive;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -539,6 +539,7 @@ html {
         
     }
 }
+
 
 
 
