@@ -34,7 +34,7 @@ text-shadow: var(--shadow);
 }
      
 .hero p {
-    font-size: 1rem;
+    font-size: 30rem;
     color: rgb(7, 7, 7);
 }
 
@@ -45,6 +45,7 @@ text-shadow: var(--shadow);
     font-display: center;
     font-weight: bold;
     text-shadow: var(--shadow);
+    padding: 2rem;
     
     
 }
@@ -82,15 +83,15 @@ text-shadow: var(--shadow);
     height: 100vh;
 }
 
-.mynavbar .navbar-brand, .mynavbar .offcanvas-title {
+.mynavbar .navbar-brand, 
+.mynavbar .offcanvas-title {
   font-family: 'sacramento', cursive;
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 .mynavbar .nav-link {
     text-transform: uppercase;
-    
 }
 
 .home {
@@ -164,16 +165,16 @@ text-shadow: var(--shadow);
     color: var(--pink);
 }
 
+
 .info {
-    background-color: var(--bg);
-    color: rgb(17, 17, 17);
+    background-image: url(img/bg-prewed.jpg);
+    background-size: cover;
+    min-height: 100vh;
     padding-top: 5rem;
     padding-bottom: 5rem;
     font-weight: bold;
-    margin: auto;
     
 }
-
 
 @media (max-width: 1200px) {
     .home .heart {
@@ -218,7 +219,14 @@ text-shadow: var(--shadow);
     font-weight: 300;
 }
 
-.story, 
+.story  {
+    background-image: url(img/bg.png);
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-weight: bold;
+}   
 .gallery,
 .rsvp,
 .gifts {
@@ -351,7 +359,7 @@ text-shadow: var(--shadow);
 }
 
 .rsvp h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 .rsvp p {
@@ -515,12 +523,7 @@ html {
 
     .simply-countdown-circle > .simply-section {
         padding: 45px;
-        margin: 3px;
-    }
-
-     .mynavbar .nav-link {
-    font-size: 1rem;
-    text-align: center;
+        margin: 4px;
     }
 
     .timeline li .timeline-image {
@@ -530,7 +533,7 @@ html {
     }
 
     .timeline li .timeline-panel {
-        width: 55%;
+        width: 65%;
         transform: translateX(1rem);
     }
 
@@ -543,7 +546,4 @@ html {
         top: 101px;
         
     }
-}
-
-
-
+    
