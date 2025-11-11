@@ -79,17 +79,18 @@ text-shadow: var(--shadow);
 }
 
 .mynavbar .offcanvas {
-    height: 50vh;
+    height: 100vh;
 }
 
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title {
   font-family: 'sacramento', cursive;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: bold;
 }
 
 .mynavbar .nav-link {
     text-transform: uppercase;
+    
 }
 
 .home {
@@ -221,7 +222,7 @@ text-shadow: var(--shadow);
 .gallery,
 .rsvp,
 .gifts {
-    padding-top: 8rem;
+    padding-top: 10rem;
     padding-bottom: 8rem;
 }
 
@@ -496,75 +497,45 @@ html {
     }
 
     .timeline li .timeline-image {
-    width: 120;
-    height: 120px;
+    width: 140;
+    height: 140px;
     }
 
      .timeline li .timeline-image {
-    width: 100;
-    height: 100px;
+    width: 120;
+    height: 120px;
     }
 }
 
 /* handphone */
-@media (max-width: 765px) {
+@media (max-width: 576px) {
 html {
-    font-size: 70%;
+    font-size: 60%;
     }  
 
     .simply-countdown-circle > .simply-section {
-        padding: 30px;
-        margin: 4px;
-    }
-
-    .sticky-top {
-        overflow: hidden;
-
-    }
-
-    .mynavbar .nav-link {
-    font-size: 1rem;
-    text-align: center;
+        padding: 45px;
+        margin: 3px;
     }
 
     .timeline li .timeline-image {
-    width: 100;
-    height: 100px;
+    width: 120;
+    height: 120px;
     top: 10px;
     }
 
     .timeline li .timeline-panel {
-        width: 80%;
-        transform: translateX(3rem);
+        width: 65%;
+        transform: translateX(1rem);
     }
 
     .timeline li.timeline-panel::before {
-        top: 80px;
+        top: 100px;
 
     }
 
      .timeline li.timeline-panel::after {
-        top: 81px;
+        top: 101px;
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
