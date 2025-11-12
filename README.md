@@ -1,2 +1,2 @@
-# sanswedding2
+# sansweddings
 Web
