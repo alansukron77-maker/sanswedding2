@@ -34,7 +34,7 @@ text-shadow: var(--shadow);
 }
      
 .hero p {
-    font-size: 30rem;
+    font-size: 1rem;
     color: rgb(7, 7, 7);
 }
 
@@ -45,7 +45,6 @@ text-shadow: var(--shadow);
     font-display: center;
     font-weight: bold;
     text-shadow: var(--shadow);
-    padding: 2rem;
     
     
 }
@@ -83,15 +82,15 @@ text-shadow: var(--shadow);
     height: 100vh;
 }
 
-.mynavbar .navbar-brand, 
-.mynavbar .offcanvas-title {
+.mynavbar .navbar-brand, .mynavbar .offcanvas-title {
   font-family: 'sacramento', cursive;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: bold;
 }
 
 .mynavbar .nav-link {
     text-transform: uppercase;
+    
 }
 
 .home {
@@ -165,16 +164,16 @@ text-shadow: var(--shadow);
     color: var(--pink);
 }
 
-
 .info {
-    background-image: url(img/bg-prewed.jpg);
-    background-size: cover;
-    min-height: 100vh;
+    background-color: var(--bg);
+    color: rgb(17, 17, 17);
     padding-top: 5rem;
     padding-bottom: 5rem;
     font-weight: bold;
+    margin: auto;
     
 }
+
 
 @media (max-width: 1200px) {
     .home .heart {
@@ -219,14 +218,7 @@ text-shadow: var(--shadow);
     font-weight: 300;
 }
 
-.story  {
-    background-image: url(img/bg.jpg);
-    background-size: cover;
-    min-height: 100vh;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    font-weight: bold;
-}   
+.story, 
 .gallery,
 .rsvp,
 .gifts {
@@ -518,11 +510,11 @@ html {
 /* handphone */
 @media (max-width: 576px) {
 html {
-    font-size: 60%;
+    font-size: 50%;
     }  
 
     .simply-countdown-circle > .simply-section {
-        padding: 45px;
+        padding: 30px;
         margin: 4px;
     }
 
@@ -547,4 +539,3 @@ html {
         
     }
 }
-    
