@@ -1,0 +1,13 @@
+<script
+async function loadWebsiteData() {
+  const data = await fetch("data/content.json").then(r => r.json());
+
+  document.getElementById("hero_title").innerText = data.hero.judul;
+  document.getElementById("hero_nama").innerText = data.hero.pasangan;
+  document.getElementById("hero_tanggal").innerText = data.hero.tanggal;
+
+  document.body.style.backgroundImage = `url('${data.hero.background}')`;
+}
+
+loadWebsiteData();
+</script>

@@ -1,0 +1,14 @@
+{
+  "akad": {
+    "tanggal": "2025-01-01",
+    "jam": "09:00",
+    "lokasi": "Jl. ...",
+    "maps": "https://maps.google.com"
+  },
+  "resepsi": {
+    "tanggal": "2025-01-01",
+    "jam": "13:00",
+    "lokasi": "Gedung ...",
+    "maps": "https://maps.google.com"
+  }
+}

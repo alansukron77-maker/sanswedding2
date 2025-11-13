@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Admin Panel</h2>
+  <a onclick="showMenu('hero')">Edit Hero</a>
+  <a onclick="showMenu('mempelai')">Edit Mempelai</a>
+  <a onclick="showMenu('story')">Edit Story</a>
+  <a onclick="showMenu('acara')">Edit Acara</a>
+  <a onclick="showMenu('galeri')">Edit Galeri</a>
+  <a onclick="showMenu('settings')">Settings</a>
+</div>
+
+<div class="content">
+
+  <section id="menu-hero" class="menu">
+    <h3>Edit Hero Section</h3>
+
+    <label>Judul:</label>
+    <input type="text" id="hero_judul">
+
+    <label>Nama Pasangan:</label>
+    <input type="text" id="hero_pasangan">
+
+    <label>Tanggal:</label>
+    <input type="date" id="hero_tanggal">
+
+    <label>Background URL:</label>
+    <input type="text" id="hero_bg">
+
+    <button onclick="saveHero()">Simpan</button>
+  </section>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

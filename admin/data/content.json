@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "judul": "The Wedding Of",
+    "nama_couple": "Alan & Citra",
+    "tanggal": "2025-01-01",
+    "background": "img/bg.jpg"
+  },
+  "mempelai": {
+    "pria": {
+      "nama": "Alan",
+      "ortu": "Putra dari Bpk ... & Ibu ...",
+      "deskripsi": "",
+      "foto": "img/pria.jpg"
+    },
+    "wanita": {
+      "nama": "Citra",
+      "ortu": "Putri dari Bpk ... & Ibu ...",
+      "deskripsi": "",
+      "foto": "img/wanita.jpg"
+    }
+  }
+}
