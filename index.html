@@ -588,8 +588,92 @@ async function loadWebsiteData() {
 loadWebsiteData();
 
 </script>
+<script>
+// load content and inject into page
+(async function(){
+  try {
+    const res = await fetch('data/content.json?t=' + Date.now());
+    const data = await res.json();
+
+    // hero
+    document.querySelector('.font-arabic')?.innerHTML = data.hero?.greeting || '';
+    document.querySelector('.hero h4 span')?.innerText = (data.hero?.invitee_prefix || '') + ',';
+    document.querySelector('#hero h1')?.innerText = data.hero?.title || document.querySelector('#hero h1')?.innerText;
+    document.querySelector('#hero p')?.innerText = data.hero?.subtitle || document.querySelector('#hero p')?.innerText;
+    if (data.hero?.bg) document.querySelector('#hero')?.style.backgroundImage = 'url('+data.hero.bg+')';
+
+    // countdown (just override simplyCountdown if present)
+    if (data.hero?.countdown && window.simplyCountdown) {
+      const c = data.hero.countdown;
+      simplyCountdown('.simply-countdown-circle', { year: c.year, month: c.month, day: c.day });
+    }
+
+    // couple
+    document.querySelectorAll('.couple h3')[0].innerText = data.couple?.left?.name || '';
+    document.querySelectorAll('.couple p')[0].innerText = data.couple?.left?.bio || '';
+    document.querySelectorAll('.couple img')[0].src = data.couple?.left?.photo || document.querySelectorAll('.couple img')[0].src;
+
+    document.querySelectorAll('.couple h3')[1].innerText = data.couple?.right?.name || '';
+    document.querySelectorAll('.couple p')[1].innerText = data.couple?.right?.bio || '';
+    document.querySelectorAll('.couple img')[1].src = data.couple?.right?.photo || document.querySelectorAll('.couple img')[1].src;
+
+    // event cards
+    document.querySelectorAll('#info .card .card-body .row .col-md-6 span')[0].innerText = data.event?.akad?.time || '';
+    document.querySelectorAll('#info .card .card-body .row .col-md-6 span')[1].innerText = data.event?.akad?.date || '';
+
+    // map url etc — can update more fields as needed
+
+    // story
+    const storyWrap = document.querySelector('#story .timeline .col');
+    if (storyWrap && data.story) {
+      const ul = document.createElement('ul'); ul.className='timeline';
+      data.story.forEach(item=>{
+        const li = document.createElement('li');
+        li.innerHTML = `<div class="timeline-image" style="background-image:url(${item.photo||''})"></div>
+          <div class="timeline-panel"><div class="timeline-heading"><h3>${item.title||''}</h3><span>${item.date||''}</span></div><div class="timeline-body"><p>${item.text||''}</p></div></div>`;
+        ul.appendChild(li);
+      });
+      storyWrap.innerHTML = ''; storyWrap.appendChild(ul);
+    }
+
+    // gallery
+    const gal = document.querySelector('#gallery .row');
+    if (gal && data.gallery) {
+      gal.innerHTML = '';
+      data.gallery.forEach(u=>{
+        const col = document.createElement('div'); col.className='col mt-3';
+        col.innerHTML = `<a href="${u}" data-toggle="lightbox" data-caption="" data-gallery="mygallery"><img src="${u}" class="img-fluid w-100 rouded"></a>`;
+        gal.appendChild(col);
+      });
+    }
+
+    // gifts
+    const giftList = document.querySelectorAll('.gifts .list-group li');
+    if (giftList && giftList[0]) giftList[0].innerHTML = `<img src="img/bni.png" class="img-thumbnail" width="80"> ${data.gifts?.bni || ''}`;
+    if (giftList && giftList[1]) giftList[1].innerHTML = `<img src="img/bca.png" class="img-thumbnail" width="100"> ${data.gifts?.bca || ''}`;
+    if (data.gifts?.qris) {
+      // update QRIS image anchor if present
+      const qEl = document.querySelector('.gifts .list-group li a');
+      if (qEl) { qEl.href = data.gifts.qris; qEl.querySelector('img') && (qEl.querySelector('img').src = data.gifts.qris); }
+    }
+
+    // music
+    if (data.music?.src) {
+      const song = document.querySelector('#song source');
+      if (song) { song.src = data.music.src; const aud = document.querySelector('#song'); aud.load(); aud.volume = data.music.volume || 0.5; }
+    }
+
+    // footer
+    if (data.footer?.credit) document.querySelector('footer p') && (document.querySelector('footer p').innerHTML = data.footer.credit);
+
+  } catch (err) {
+    console.warn('Load content error', err);
+  }
+})();
+</script>
 
 
 
   </body>
 </html>
+
