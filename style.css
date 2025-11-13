@@ -510,7 +510,7 @@ html {
 /* handphone */
 @media (max-width: 576px) {
 html {
-    font-size: 50%;
+    font-size: 65%;
     }  
 
     .simply-countdown-circle > .simply-section {
@@ -519,7 +519,7 @@ html {
     }
 
      .mynavbar .nav-link {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     }
 
@@ -544,4 +544,5 @@ html {
         
     }
 }
+
 
