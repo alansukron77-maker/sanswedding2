@@ -1,88 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Admin Panel Website</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f7;
-    display: flex;
-  }
-  /* Sidebar */
-  .sidebar {
-    width: 260px;
-    height: 100vh;
-    background: #111827;
-    color: #fff;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-  .sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  .menu a {
-    display: block;
-    padding: 12px;
-    margin-bottom: 8px;
-    background: #1f2937;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-  }
-  .menu a:hover {
-    background: #374151;
-  }
-  /* Main */
-  .main {
-    margin-left: 260px;
-    padding: 30px;
-    width: calc(100% - 260px);
-  }
-  h1 {
-    margin-bottom: 10px;
-  }
-  .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 25px;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
-  button {
-    background: #2563eb;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  button:hover {
-    background: #1d4ed8;
-  }
-  .section-title {
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-</style>
-</head>
-<body>
+// Cek login
+if (localStorage.getItem("auth") !== "true") {
+  window.location = "login.html";
+}
+
+// ---- SAVE HERO ----
+function saveHero() {
+  localStorage.setItem("hero_judul", document.getElementById("hero_judul").value);
+  localStorage.setItem("hero_nama", document.getElementById("hero_nama").value);
+  alert("Hero disimpan!");
+}
+
+// ---- SAVE MEMPELAI ----
+function saveMempelai() {
+  localStorage.setItem("pria", document.getElementById("pria").value);
+  localStorage.setItem("desk_pria", document.getElementById("desk_pria").value);
+  localStorage.setItem("wanita", document.getElementById("wanita").value);
+  localStorage.setItem("desk_wanita", document.getElementById("desk_wanita").value);
+  alert("Data mempelai disimpan!");
+}
+
+// ---- SAVE STORY ----
+function saveStory() {
+  localStorage.setItem("story_text", document.getElementById("story_text").value);
+  alert("Story disimpan!");
+}
+
+// ---- SAVE ACARA ----
+function saveAcara() {
+  localStorage.setItem("tanggal", document.getElementById("tanggal").value);
+  localStorage.setItem("alamat", document.getElementById("alamat").value);
+  alert("Acara disimpan!");
+}
+
+// ---- SAVE GALERI ----
+function saveGaleri() {
+  let galeri = JSON.parse(localStorage.getItem("galeri") || "[]");
+  galeri.push(document.getElementById("galeri_link").value);
+  localStorage.setItem("galeri", JSON.stringify(galeri));
+  alert("Foto ditambahkan!");
+}
+
 <!-- Logout Button -->
 <button id="logoutBtn" style="position:fixed; top:20px; right:20px; padding:10px 18px; background:#e63946; color:#fff; border:none; border-radius:8px; cursor:pointer; z-index:999;">Logout</button>
   <div class="sidebar">
@@ -171,3 +128,4 @@ if(logoutBtn){
 </script>
 </body>
 </html>
+
