@@ -41,9 +41,10 @@ text-shadow: var(--shadow);
 }
 .hero h1 {
     font-family: 'sacramento', cursive;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-display: center;
     font-weight: bold;
+    color: var(--pink)
     text-shadow: var(--shadow);
     
     
@@ -682,4 +683,5 @@ html {
         
     }
 }
+
 
