@@ -640,10 +640,16 @@ html {
 }
 
 /* handphone */
-@media (max-width: 576px) {
-html {
-    font-size: 50%;
-    }  
+@media (max-width: 768px) {
+  .offcanvas-start {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .offcanvas {
+    height: 100vh;
+    overflow-y: auto;
+  }
 
     .simply-countdown-circle > .simply-section {
         padding: 30px;
@@ -676,3 +682,4 @@ html {
         
     }
 }
+
