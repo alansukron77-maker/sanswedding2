@@ -1,44 +1,80 @@
-// Cek login
-if (localStorage.getItem("auth") !== "true") {
-  window.location = "login.html";
-}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<style>
+body { margin:0; font-family:Arial; display:flex; }
+.sidebar { width:260px; background:#111827; color:#fff; height:100vh; padding:20px; position:fixed; }
+.sidebar a { display:block; padding:12px; margin:8px 0; background:#1f2937; border-radius:8px; color:#fff; text-decoration:none; }
+.sidebar a:hover { background:#374151; }
+.main { margin-left:260px; padding:30px; width:100%; }
+.card { background:#fff; padding:20px; border-radius:10px; margin-bottom:25px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+input,textarea { width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #ccc; }
+button { padding:12px 20px; background:#2563eb; color:#fff; border:none; border-radius:8px; margin-top:15px; cursor:pointer; }
+button:hover { background:#1d4ed8; }
+</style>
+</head>
 
-// ---- SAVE HERO ----
-function saveHero() {
-  localStorage.setItem("hero_judul", document.getElementById("hero_judul").value);
-  localStorage.setItem("hero_nama", document.getElementById("hero_nama").value);
-  alert("Hero disimpan!");
-}
+<body>
 
-// ---- SAVE MEMPELAI ----
-function saveMempelai() {
-  localStorage.setItem("pria", document.getElementById("pria").value);
-  localStorage.setItem("desk_pria", document.getElementById("desk_pria").value);
-  localStorage.setItem("wanita", document.getElementById("wanita").value);
-  localStorage.setItem("desk_wanita", document.getElementById("desk_wanita").value);
-  alert("Data mempelai disimpan!");
-}
+<div class="sidebar">
+  <h2>ADMIN</h2>
+  <a href="#hero">Hero</a>
+  <a href="#mempelai">Mempelai</a>
+  <a href="#story">Story</a>
+  <a href="#acara">Acara</a>
+  <a href="#galeri">Galeri</a>
+</div>
 
-// ---- SAVE STORY ----
-function saveStory() {
-  localStorage.setItem("story_text", document.getElementById("story_text").value);
-  alert("Story disimpan!");
-}
+<div class="main">
 
-// ---- SAVE ACARA ----
-function saveAcara() {
-  localStorage.setItem("tanggal", document.getElementById("tanggal").value);
-  localStorage.setItem("alamat", document.getElementById("alamat").value);
-  alert("Acara disimpan!");
-}
+<h1>Panel Admin</h1>
 
-// ---- SAVE GALERI ----
-function saveGaleri() {
-  let galeri = JSON.parse(localStorage.getItem("galeri") || "[]");
-  galeri.push(document.getElementById("galeri_link").value);
-  localStorage.setItem("galeri", JSON.stringify(galeri));
-  alert("Foto ditambahkan!");
-}
+<!-- HERO -->
+<div id="hero" class="card">
+  <h3>Hero Section</h3>
+  <input id="hero_judul" placeholder="Judul / Welcome Text">
+  <input id="hero_nama" placeholder="Nama Pasangan">
+  <button onclick="saveHero()">Simpan</button>
+</div>
+
+<!-- MEMPELAI -->
+<div id="mempelai" class="card">
+  <h3>Data Mempelai</h3>
+  <input id="pria" placeholder="Nama Pria">
+  <textarea id="desk_pria" placeholder="Deskripsi Pria"></textarea>
+  <input id="wanita" placeholder="Nama Wanita">
+  <textarea id="desk_wanita" placeholder="Deskripsi Wanita"></textarea>
+  <button onclick="saveMempelai()">Simpan</button>
+</div>
+
+<!-- STORY -->
+<div id="story" class="card">
+  <h3>Story / Cerita</h3>
+  <textarea id="story_text" placeholder="Tulis cerita..."></textarea>
+  <button onclick="saveStory()">Simpan</button>
+</div>
+
+<!-- ACARA -->
+<div id="acara" class="card">
+  <h3>Informasi Acara</h3>
+  <input id="tanggal" placeholder="Tanggal Acara">
+  <input id="alamat" placeholder="Alamat Acara">
+  <button onclick="saveAcara()">Simpan</button>
+</div>
+
+<!-- GALERI -->
+<div id="galeri" class="card">
+  <h3>Galeri Foto</h3>
+  <input id="galeri_link" placeholder="Link Foto (imgur / upload)">
+  <button onclick="saveGaleri()">Tambah Foto</button>
+</div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
 
 <!-- Logout Button -->
 <button id="logoutBtn" style="position:fixed; top:20px; right:20px; padding:10px 18px; background:#e63946; color:#fff; border:none; border-radius:8px; cursor:pointer; z-index:999;">Logout</button>
@@ -128,4 +164,5 @@ if(logoutBtn){
 </script>
 </body>
 </html>
+
 
